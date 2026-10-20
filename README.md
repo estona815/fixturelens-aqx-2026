@@ -3,7 +3,7 @@
 Understand the last five: a historical football form review with exact earlier
 training evidence. Prepared locally for AQX Sports Analytics Data Bowl 4.0.
 **Source publication is separate from Devpost registration and final entry.**
-This package makes no claim of completed Devpost registration or submission.
+This package makes no claim of completed final Devpost submission.
 AI assisted the concept, code,
 implementation, tests and documentation. The visual concept is AI generated;
 the running interface is real HTML/CSS/React/SVG, with computed archived data.
@@ -82,7 +82,21 @@ not a causal claim about skill. Leave-one-out mean ranges are sensitivity
 ranges, not confidence intervals. Historical data is not a live forecast or
 betting recommendation.
 
-Current official event rules do not explicitly address AI assistance; no
-affirmative organizer permission or eligibility approval is claimed. Independent
-method/source review, coordinated publication, action-time event agreements and
-actual receipt verification remain before entry completion.
+## Submission preflight record — 2026-10-20
+
+The initial rules-page preflight did not explicitly address AI assistance.
+The actual finalization form subsequently stated: “We allow the usage of AI,
+so long as your ideas and final execution are your own.” AI contributions are
+disclosed above; this is not a claim of organizer eligibility approval.
+
+Independent method/source and desktop-interface review is complete. A separate
+check recomputed all 760 predictions and compared 10,580 club/date/model
+combinations. The published 24-file source was read back and matched its reviewed
+SHA-256 manifest; the fetched source passed 12 Python tests, 7 JavaScript tests
+and offline reproduction. These checks do not independently validate the source
+scores against official league records or establish future predictive accuracy.
+
+At this recorded preflight, individual event registration was complete and the
+FixtureLens Devpost draft (submission 1247423) was saved at 3/4 steps, with three
+actual app screenshots and a thumbnail. Final entry acceptance was not yet
+verified. A public repository or project page alone is not an event receipt.
