@@ -1,0 +1,113 @@
+{
+  "baseline": {
+    "dirichlet_pseudocount_each": 1,
+    "model": "Prior league home/draw/away frequencies",
+    "ui_default": "Baseline fixed before metrics are observed"
+  },
+  "candidate": {
+    "away_win_probability": "1-E_home-P_draw/2",
+    "draw_frequency_bins_absolute_adjusted_rating_difference": [
+      0,
+      100,
+      200
+    ],
+    "draw_prior_draws": 5,
+    "draw_prior_total": 15,
+    "draw_probability": "min((earlier_bin_draws+5)/(earlier_bin_matches+15), 2*min(E_home,1-E_home))",
+    "expected_home_score": "1/(1+10**((R_away-R_home-65)/400))",
+    "home_advantage": 65,
+    "home_win_probability": "E_home - P_draw/2",
+    "initial_rating": 1500,
+    "k_factor": 20,
+    "model": "Fixed Elo expected-score plus earlier-data draw frequency",
+    "observed_home_score": {
+      "away_win": 0,
+      "draw": 0.5,
+      "home_win": 1
+    },
+    "parameter_selection": "Declared fixed heuristic; no accuracy/optimality claim; no tuning on evaluation season",
+    "rating_scale": 400,
+    "update_home": "20*(observed_home_score-E_home)"
+  },
+  "chronology": {
+    "elo_updates": "Compute day-end rating deltas from pre-day ratings; no team appears twice per day in verified input",
+    "prediction_uses": "Only matches whose date is strictly earlier than predicted match date",
+    "same_date": "Predict entire date batch before updating any model state",
+    "season_carry": "Carry history across seasons; an unseen club starts at initial Elo; no full-season outcome aggregates used as input",
+    "times": "Ignored because source time zones/order not independently verified",
+    "training_provenance": "Each prediction records training count and latest training date, plus contributing earlier match IDs"
+  },
+  "coverage_and_limits": [
+    "Reject malformed, unscored or duplicate match inputs rather than silently changing data",
+    "Only source scores/dates/teams are available; no injury, player rest, xG or tracking claims",
+    "Data structure verified; actual league results not independently reconciled",
+    "Model-relative context for choosing match review, not causal difficulty, true skill or a forecast guarantee"
+  ],
+  "development_season": "2023-24",
+  "evaluation": {
+    "documentation_reference": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.brier_score_loss.html",
+    "formula": "mean(sum((p_c - y_c)**2 for c in [H,D,A]))",
+    "metric": "Mean unscaled multiclass Brier loss",
+    "model_selection": "No automatic switch of UI default based on held-out loss; candidate comparison remains visible even if worse",
+    "range": [
+      0,
+      2
+    ],
+    "report": "Both baseline and candidate on every eligible held-out match; report n and candidate-minus-baseline loss",
+    "uniform_three_class_reference": 0.6666666666666666
+  },
+  "evaluation_season": "2024-25",
+  "form_window": {
+    "expected_points_away": "3*P_away_win+P_draw",
+    "expected_points_home": "3*P_home_win+P_draw",
+    "insufficient_history": "Explicitly unavailable until five observations; no padding with future results",
+    "matches": "Last five completed domestic league appearances as of selected date",
+    "not_a_confidence_interval": true,
+    "population": "Show all eligible club windows, not hand-picked success cases",
+    "residual": "Actual points minus pre-match expected points",
+    "sensitivity": "Five leave-one-out mean residuals, each using four games; report min/max against full five-game mean",
+    "window_size": 5
+  },
+  "frozen_at": "2026-10-19T13:27:43.992261+00:00",
+  "input_seasons": [
+    {
+      "bytes": 116669,
+      "duplicate_ordered_pairs": false,
+      "first_date": "2023-08-11",
+      "last_date": "2024-05-19",
+      "matches": 380,
+      "path": "_artifacts/review/aqx__walk-forward-preflight__2026-10-19__v001/upstream-en.1-2023-24.json",
+      "same_team_twice_same_day": false,
+      "score_fields": "Final scores only; no odds, injury, xG or tracking data",
+      "season": "2023-24",
+      "sha256": "03e13eafbf78dfe00d7e89dd3bf6643986eb6e8fd86c7664aeb8c5bc0bed88d0",
+      "teams": 20
+    },
+    {
+      "bytes": 110141,
+      "duplicate_ordered_pairs": false,
+      "first_date": "2024-08-16",
+      "last_date": "2025-05-25",
+      "matches": 380,
+      "path": "_artifacts/review/aqx__data-source-feasibility__2026-10-19__v001/upstream-en.1-2024-25.json",
+      "same_team_twice_same_day": false,
+      "score_fields": "Final scores only; no odds, injury, xG or tracking data",
+      "season": "2024-25",
+      "sha256": "c3d18f552d83382cd4b6b21127adbbfe38e7f8618ddc979fb5404f2df07d0a75",
+      "teams": 20
+    }
+  ],
+  "metrics_computed_before_this_freeze": false,
+  "model_fitted_before_this_freeze": false,
+  "outcomes": [
+    "home_win",
+    "draw",
+    "away_win"
+  ],
+  "publication": false,
+  "registration": false,
+  "schema": "fixturelens_local_preanalysis_plan/v1",
+  "status": "RESEARCH_SPECIFICATION_NOT_IMPLEMENTED",
+  "submission": false,
+  "upstream_commit": "e6744429ee395bc86f247348c6184bb08d4eb361"
+}

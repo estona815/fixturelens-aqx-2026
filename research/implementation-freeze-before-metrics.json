@@ -1,0 +1,16 @@
+{
+  "schema": "fixturelens/implementation-before-first-real-metrics/v1",
+  "at_utc": "2026-10-20T00:34:46.203068+00:00",
+  "preanalysis_plan_path": "_artifacts/review/aqx__walk-forward-preflight__2026-10-19__v001/preanalysis-plan.json",
+  "preanalysis_sha256": "2237d8781491300904a0272b5288c785580d097339d2d705c4561f68703abd59",
+  "source_files": {
+    "fixturelens.py": "97db48fb2ac4fbe1b20e420344c7906d91fda5b8f84c2c43f803ad9dfe079d2b",
+    "test_fixturelens.py": "589ab6cc078d9af2d3d27e8de4eb84720ed345af2144909dfd2341c0c539599b"
+  },
+  "synthetic_tests_passed": 12,
+  "real_data_metrics_computed": false,
+  "parameters_selected_using_evaluation_data": false,
+  "default_model": "baseline",
+  "new_registration": false,
+  "new_publication": false
+}
