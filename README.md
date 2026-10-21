@@ -2,8 +2,10 @@
 
 Understand the last five: a historical football form review with exact earlier
 training evidence. Prepared locally for AQX Sports Analytics Data Bowl 4.0.
-**Source publication is separate from Devpost registration and final entry.**
-This package makes no claim of completed final Devpost submission.
+**Final project submission was confirmed on October 20, 2026 (KST), as
+submission 1247423.** [View the Devpost project](https://devpost.com/software/fixturelens).
+The platform showed SUBMITTED with all four steps complete after reload.
+This is a historical submission receipt, not a judging result or award.
 AI assisted the concept, code,
 implementation, tests and documentation. The visual concept is AI generated;
 the running interface is real HTML/CSS/React/SVG, with computed archived data.
@@ -96,7 +98,11 @@ SHA-256 manifest; the fetched source passed 12 Python tests, 7 JavaScript tests
 and offline reproduction. These checks do not independently validate the source
 scores against official league records or establish future predictive accuracy.
 
-At this recorded preflight, individual event registration was complete and the
+At the initial preflight, individual event registration was complete and the
 FixtureLens Devpost draft (submission 1247423) was saved at 3/4 steps, with three
-actual app screenshots and a thumbnail. Final entry acceptance was not yet
-verified. A public repository or project page alone is not an event receipt.
+actual app screenshots and a thumbnail. Finalization subsequently completed on
+October 20, 2026 (KST): the platform displayed “Project submitted!” and the
+reloaded management page retained SUBMITTED with 4/4 steps complete for that
+same submission. The repository publication preceded this separate platform
+receipt. Organizer eligibility approval, judging results and awards remain
+unconfirmed.
