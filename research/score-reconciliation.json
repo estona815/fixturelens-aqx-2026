@@ -1,0 +1,73 @@
+{
+  "schema": "fixturelens/score-reconciliation/v1",
+  "checked_at_utc": "2026-10-21T12:10:54.665387+00:00",
+  "compared_fields": [
+    "home_club",
+    "away_club",
+    "calendar_date",
+    "full_time_home_goals",
+    "full_time_away_goals"
+  ],
+  "aliases": {
+    "AFC Bournemouth": "Bournemouth",
+    "Arsenal FC": "Arsenal",
+    "Aston Villa FC": "Aston Villa",
+    "Brentford FC": "Brentford",
+    "Brighton & Hove Albion FC": "Brighton",
+    "Burnley FC": "Burnley",
+    "Chelsea FC": "Chelsea",
+    "Crystal Palace FC": "Crystal Palace",
+    "Everton FC": "Everton",
+    "Fulham FC": "Fulham",
+    "Ipswich Town FC": "Ipswich",
+    "Leicester City FC": "Leicester",
+    "Liverpool FC": "Liverpool",
+    "Luton Town FC": "Luton",
+    "Manchester City FC": "Man City",
+    "Manchester United FC": "Man United",
+    "Newcastle United FC": "Newcastle",
+    "Nottingham Forest FC": "Nott'm Forest",
+    "Sheffield United FC": "Sheffield United",
+    "Southampton FC": "Southampton",
+    "Tottenham Hotspur FC": "Tottenham",
+    "West Ham United FC": "West Ham",
+    "Wolverhampton Wanderers FC": "Wolves"
+  },
+  "seasons": [
+    {
+      "season": "2023-24",
+      "reference_url": "https://football-data.co.uk/mmz4281/2324/E0.csv",
+      "archive_sha256": "03e13eafbf78dfe00d7e89dd3bf6643986eb6e8fd86c7664aeb8c5bc0bed88d0",
+      "reference_sha256": "b2e057b0ed959f198b0f63d2391c01239f3608e6de5db68edab3f88e04d07ff3",
+      "archive_fixtures": 380,
+      "reference_fixtures": 380,
+      "matched_ordered_fixtures": 380,
+      "date_mismatches": [],
+      "score_mismatches": [],
+      "missing_from_reference": [],
+      "extra_in_reference": [],
+      "all_agree": true
+    },
+    {
+      "season": "2024-25",
+      "reference_url": "https://football-data.co.uk/mmz4281/2425/E0.csv",
+      "archive_sha256": "c3d18f552d83382cd4b6b21127adbbfe38e7f8618ddc979fb5404f2df07d0a75",
+      "reference_sha256": "d0c8ce4a96d886cf60cf101f570f4a3893844226f91c7bd769eb568c49edbfa4",
+      "archive_fixtures": 380,
+      "reference_fixtures": 380,
+      "matched_ordered_fixtures": 380,
+      "date_mismatches": [],
+      "score_mismatches": [],
+      "missing_from_reference": [],
+      "extra_in_reference": [],
+      "all_agree": true
+    }
+  ],
+  "all_agree": true,
+  "limits": [
+    "Separate publisher agreement, not official league certification.",
+    "Upstream independence has not been established.",
+    "No kickoff times, half-time scores, odds or match statistics checked.",
+    "Does not establish predictive validity, significance or future accuracy."
+  ]
+}

@@ -106,3 +106,40 @@ reloaded management page retained SUBMITTED with 4/4 steps complete for that
 same submission. The repository publication preceded this separate platform
 receipt. Organizer eligibility approval, judging results and awards remain
 unconfirmed.
+
+## Full-time score cross-check — 2026-10-21
+
+All 760 archived fixtures were compared with the separately published
+[Football-Data English Premier League CSVs](https://football-data.co.uk/englandm.php)
+([2023–24](https://football-data.co.uk/mmz4281/2324/E0.csv),
+[2024–25](https://football-data.co.uk/mmz4281/2425/E0.csv)). After an explicit
+23-club alias mapping, every ordered home/away fixture, calendar date and
+full-time home/away score agreed: 380/380 in each season, with no missing,
+extra, date-mismatched or score-mismatched fixtures.
+
+The [recorded report](research/score-reconciliation.json) includes both input
+SHA-256 values, the complete alias map and comparison limits. Football-Data is
+a separate publisher, not an official league certification; upstream source
+independence has not been established. Kickoff times, half-time results, odds
+and other match statistics were not checked or added to the model. Agreement
+does not establish predictive validity or future accuracy. The original data,
+preanalysis plan, implementation freeze, model and evaluation metrics are unchanged.
+
+To repeat the check, download those two CSVs separately and keep them outside
+the repository. Only Python's standard library is needed; the checker itself
+makes no network calls and writes no files:
+
+```sh
+python3 research/reconcile_scores.py \
+  --reference-2023-24 /path/to/2324-E0.csv \
+  --reference-2024-25 /path/to/2425-E0.csv
+python3 -m unittest discover -s research -p 'test_reconcile_scores.py' -v
+```
+
+Exit status is 0 only for complete agreement and 1 for a comparison mismatch;
+invalid inputs also fail. Compare downloaded file hashes with the recorded
+report before claiming reproduction of this exact snapshot. Nine tests cover
+score/date changes, missing/extra fixtures, duplicate identities, unknown
+aliases, invalid reference values, reversed venues and empty input. Reference
+CSVs are not redistributed in this repository.
+
